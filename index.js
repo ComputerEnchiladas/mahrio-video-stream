@@ -7,8 +7,9 @@ var indexPage, index2Page, movie_webm, movie_mp4, movie_ogg;
 
 // load the video files and the index html page
 //sudo apt-get install gpac
-//MP4Box  -fps 30  -add infile.h264 outfile.mp4
-//omxplayer outfile.mp4
+//raspivid -w 1280 -h 720 -o test3.h264 -t 200000 -b 3000000  -fps 23
+//MP4Box  -fps 30  -add test3.h264 test3.mp4
+//omxplayer test3.mp4
 fs.readFile(path.resolve(__dirname,"video-from-h264.mp4"), function (err, data) {
     if (err) {
         throw err;
